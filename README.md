@@ -48,7 +48,7 @@ margin_criterion = OrdinalContrastiveLoss_sm(
 
 ### For Different Margins (Multiple)
 
-Use when you want different margins between each class.
+Use when you want different margins between class pairs.
 
 #### 1. Random Initialization
 
