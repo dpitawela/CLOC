@@ -13,7 +13,7 @@ CLOC is a contrastive loss function designed for ordinal classification tasks. I
 To use CLOC, you need to specify the following:
 
 - `n_classes`: Number of classes in the dataset.
-- `summaryWriter`: (Optional) Pass a SummaryWriter from `torch.utils.tensorboard`, if you want to log the margins during training.
+- `summaryWriter`: (Optional) Pass a SummaryWriter object from `torch.utils.tensorboard`, if you want to log the margins during training. If you choose to use it, make sure to pass `global_step` inside the training loop.
 - `learnable_map`: Pass a margin setting (explained below).
 
 ### Multiple Margins
@@ -56,7 +56,7 @@ To initialize all margins with random values between 0.5 and 1.0:
 learnable_map = None
 ```
 
-#### 2. Initialize To Specific Values
+#### 2. Initialize With Specific Values
 
 For a dataset with five classes, to initialize some margins with specific values:
 
@@ -88,8 +88,6 @@ learnable_map = [
 ---
 
 ### For Single Margin
-
-Same value is applied for all the margins.
 
 #### 1. Random Initialization
 
