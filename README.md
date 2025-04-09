@@ -48,6 +48,8 @@ margin_criterion = OrdinalContrastiveLoss_sm(
 
 ### For Different Margins (Multiple)
 
+Use when you want different margins between each class.
+
 #### 1. Random Initialization
 
 To initialize all margins with random values between 0.5 and 1.0:
@@ -88,6 +90,8 @@ learnable_map = [
 ---
 
 ### For Single Margin
+
+Use when you want a single margin value shared across all class pairs.
 
 #### 1. Random Initialization
 
