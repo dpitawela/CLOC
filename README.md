@@ -1,7 +1,3 @@
-Sure! Here's a clean and simple version of your description formatted nicely for a GitHub README using Markdown:
-
----
-
 # CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss
 
 [**Paper**](http://example.com/)
