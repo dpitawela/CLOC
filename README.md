@@ -161,7 +161,7 @@ for i, (imgs, labels) in enumerate(trainloader):
 
 ### Training Phases
 
-CLOC employes a two-phase training strategy:
+CLOC employs a two-phase training strategy:
 
 - **Phase One:** Both the model parameters and the margin values are optimized jointly (as above training loop).
 - **Phase Two:** Only the model parameters are optimized, while the margin values are frozen.
