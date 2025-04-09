@@ -13,7 +13,7 @@ CLOC is a contrastive loss function designed for ordinal classification tasks. I
 To use CLOC, you need to specify the following:
 
 - `n_classes`: Number of classes in the dataset.
-- `summaryWriter`: (Optional) Pass a SummaryWriter if you want to log the margins during training.
+- `summaryWriter`: (Optional) Pass a SummaryWriter from `torch.utils.tensorboard`, if you want to log the margins during training.
 - `learnable_map`: Pass a margin setting (explained below).
 
 ### Multiple Margins
