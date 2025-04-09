@@ -3,9 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class OrdinalContrastiveLoss_mm(nn.Module):
-    def __init__(self, n_classes, device, d=0, learnable_map=None, summaryWriter=None):
+    def __init__(self, n_classes, device, learnable_map=None, summaryWriter=None):
         super().__init__()
-        self.d = d
         self.n_distances = n_classes - 1 # n-1 distances between n classes
         self.device = device
 
@@ -59,8 +58,8 @@ class OrdinalContrastiveLoss_mm(nn.Module):
         # taking label differences
         label_diff = torch.abs(target.unsqueeze(0) - target.unsqueeze(1)).float()
 
-        # taking positive and negative samples conditioning on label distance d
-        positives = label_diff <= self.d
+        # taking positive and negative samples conditioning on label distance
+        positives = label_diff <= 0
         negatives = ~positives
         positives[torch.eye(n_samples).bool()] = False # to avoid taking data point itself as a positive pair
 
@@ -126,9 +125,8 @@ class OrdinalContrastiveLoss_mm(nn.Module):
     
 
 class OrdinalContrastiveLoss_sm(nn.Module):
-    def __init__(self, n_classes, device, d=0, learnable_map=None, summaryWriter=None):
+    def __init__(self, n_classes, device, learnable_map=None, summaryWriter=None):
         super().__init__()
-        self.d = d
         self.n_distances = n_classes - 1 # n-1 distances between n classes
         self.device = device
         self.writer = summaryWriter
@@ -159,8 +157,8 @@ class OrdinalContrastiveLoss_sm(nn.Module):
         # taking label differences
         label_diff = torch.abs(target.unsqueeze(0) - target.unsqueeze(1)).float()
 
-        # taking positive and negative samples conditioning on label distance d
-        positives = label_diff <= self.d
+        # taking positive and negative samples conditioning on label distance
+        positives = label_diff <= 0
         negatives = ~positives
         positives[torch.eye(n_samples).bool()] = False # to avoid taking data point itself as a positive pair
 

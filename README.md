@@ -14,7 +14,7 @@ To use CLOC, you need to specify the following:
 
 - `n_classes`: Number of classes in the dataset.
 - `summaryWriter`: (Optional) Pass a SummaryWriter if you want to log the margins during training.
-- `learnable_map`: Pass a list of margin settings (explained below).
+- `learnable_map`: Pass a margin setting (explained below).
 
 ### Multiple Margins
 
@@ -24,7 +24,6 @@ Use when you want different margins between each class.
 margin_criterion = OrdinalContrastiveLoss_mm(
     n_classes=5, 
     device=device, 
-    d=0, 
     summaryWriter=writer, 
     learnable_map=None
 )
@@ -38,7 +37,6 @@ Use when you want a single margin value shared across all class pairs.
 margin_criterion = OrdinalContrastiveLoss_sm(
     n_classes=5, 
     device=device, 
-    d=0, 
     summaryWriter=writer, 
     learnable_map=None
 )
@@ -128,7 +126,6 @@ CLOC can be used like any standard loss function in your training loop.
 margin_criterion = OrdinalContrastiveLoss_mm(
     n_classes=5,
     device=device,
-    d=0,
     summaryWriter=writer,
     learnable_map=param_map
 )
