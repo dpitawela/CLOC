@@ -50,35 +50,37 @@ margin_criterion = OrdinalContrastiveLoss_sm(
 
 #### 1. Random Initialization
 
-To initialize margins with random values between 0.5 and 1.0:
+To initialize all margins with random values between 0.5 and 1.0:
 
 ```python
 learnable_map = None
 ```
 
-#### 2. Specific Learnable Values
+#### 2. Initialize To Specific Values
 
-To initialize with specific values and allow them to be learned:
+For a dataset with five classes, to initialize some margins with specific values:
 
 ```python
 # Use values of your choice
 learnable_map = [
-    ['learnable', 0.12],
+    ['learnable', None],
     ['learnable', 0.25],
     ['learnable', 0.51],
-    ['learnable', 0.32]
+    ['learnable', None]
 ]
 ```
+`None` values are randomly initialised between 0.5 and 1.0. All margins are being updated during training as they are `learnable`.
+
 
 #### 3. Mix of Fixed and Learnable Margins
 
-To fix some margins and learn others:
+To fix some margins to prevent them from being updated during training while learning others:
 
 ```python
 learnable_map = [
     ['fixed', 0.12],
-    ['learnable', 0.25],
-    ['fixed', 0.51],
+    ['learnable', None],
+    ['fixed', 0.40],
     ['learnable', 0.32]
 ]
 ```
@@ -86,6 +88,8 @@ learnable_map = [
 ---
 
 ### For Single Margin
+
+Same value is applied for all the margins.
 
 #### 1. Random Initialization
 
