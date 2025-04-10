@@ -87,6 +87,7 @@ learnable_map = [
 ]
 ```
 `fixed` margins do not change during training.
+
 ---
 
 ### For Single Margin
