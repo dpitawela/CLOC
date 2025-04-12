@@ -164,7 +164,7 @@ for i, (imgs, labels) in enumerate(trainloader):
 
 CLOC employs a two-phase training strategy:
 
-- **Phase One:** Both the model parameters and the margin values are optimized jointly (as above training loop).
-- **Phase Two:** Only the model parameters are optimized, while the margin values are frozen.
+- **Phase One:** In this phase, both the model parameters and the parameters of the `OrdinalContrastiveLoss` (i.e. the margins) are optimized jointly (as in the above training loop).
+- **Phase Two:** In this phase, only the model parameters are optimized, while the margin values learned in the Phase One are kept fixed. The margin values from Phase One are reused by passing them through a `param_map `, ensuring they remain fixed during training.
 
 Refer the paper for more details.
