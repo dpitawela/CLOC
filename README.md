@@ -4,7 +4,7 @@
 
 CLOC is a contrastive loss function designed for ordinal classification tasks. It supports both multiple and single margin setups and can be integrated easily into PyTorch training loop.
 
-[**Paper**](#)
+[**Paper**](https://arxiv.org/abs/2504.17813)
 
 ---
 
@@ -168,3 +168,16 @@ CLOC employs a two-phase training strategy:
 - **Phase Two:** In this phase, only the model parameters are optimized, while the margin values learned in the Phase One are kept fixed. The margin values from Phase One are reused by passing them through a `learnable_map`, ensuring they remain fixed during training.
 
 Refer the paper for more details.
+
+
+```
+@misc{cloc,
+      title={CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss}, 
+      author={Dileepa Pitawela and Gustavo Carneiro and Hsiang-Ting Chen},
+      year={2025},
+      eprint={2504.17813},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.17813}, 
+}
+```
