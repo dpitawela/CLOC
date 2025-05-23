@@ -170,6 +170,27 @@ CLOC employs a two-phase training strategy:
 Refer the paper for more details.
 
 
+### Accessing The Learned Margins
+
+You can retrieve the learned margin values in two ways:
+
+**Option 1: Using TensorBoard (Recommended & Easiest)**
+
+If you pass a `SummaryWriter` instance to the loss object during initialization and include `global_step` in the `forward` method, margin values will be automatically logged to TensorBoard during training.
+
+* You’ll see both fixed and learnable margins in the logs.
+* These values can be directly extracted to build the `learnable_map` for Phase Two.
+
+**Option 2: Manual Access**
+
+You can also manually access the learnable margins (not the fixed ones) like below, and use them to build the `learnable_map` for Phase Two.
+
+* ``` F.softplus(margin_criterion.learnables)``` for `OrdinalContrastiveLoss_mm` and
+* ```F.softplus(margin_criterion.distance)``` for `OrdinalContrastiveLoss_sm`
+
+Note: This must be done before the program ends, or the values will be lost.
+
+
 ```
 @misc{cloc,
       title={CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss}, 
