@@ -186,10 +186,10 @@ If you pass a `SummaryWriter` instance to the loss object during initialization 
 
 You can also manually access the learnable margins (not the fixed ones) like below, and use them to build the `learnable_map` for Phase Two.
 
-* ``` F.softplus(margin_criterion.learnables)``` for `OrdinalContrastiveLoss_mm` and
+* ``` F.softplus(margin_criterion.learnables)``` for `OrdinalContrastiveLoss_mm`
 * ```F.softplus(margin_criterion.distance)``` for `OrdinalContrastiveLoss_sm`
 
-Note: This must be done before the program ends, or the values will be lost.
+Note: Unlike the Option 1, this must be done before the program ends, or the values will be lost.
 
 
 ```
