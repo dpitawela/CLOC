@@ -169,6 +169,7 @@ CLOC employs a two-phase training strategy:
 
 Refer the paper for more details.
 
+---
 
 ### Accessing The Learned Margins
 
