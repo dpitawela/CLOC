@@ -8,7 +8,7 @@ CLOC is a contrastive loss function designed for ordinal classification tasks. I
 
 ---
 
-## Initialization
+## 🚀 Initialization
 
 To use CLOC, you need to specify the following:
 
@@ -44,7 +44,7 @@ margin_criterion = OrdinalContrastiveLoss_sm(
 
 ---
 
-## Margin Parameter Setup
+## 📝 Margin Parameter Setup
 
 ### For Different Margins (Multiple)
 
@@ -124,7 +124,7 @@ learnable_map = [
 
 ---
 
-## Usage
+## 🔧 Usage
 
 CLOC can be used like any standard loss function in your training loop.
 
