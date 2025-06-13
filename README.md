@@ -52,8 +52,6 @@ margin_criterion = OrdinalContrastiveLoss_sm(
 )
 ```
 
----
-
 ## 📝 Margin Parameter Setup
 
 ### For Different Margins (Multiple)
@@ -131,8 +129,6 @@ learnable_map = [
     ['fixed', 0.47]
 ]
 ```
-
----
 
 ## 🔧 Usage
 
