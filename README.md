@@ -10,6 +10,11 @@ CLOC is a contrastive loss function designed for ordinal classification tasks. I
 
 [![ARXIV](./assets/arxiv_logo.jpg)](https://arxiv.org/abs/2504.17813)
 
+
+<a href="https://arxiv.org/abs/2504.17813">
+  <img src="./assets/arxiv_logo.jpg" alt="Arxiv Logo" width="300"/>
+</a>
+
 ---
 
 ## 🚀 Initialization
