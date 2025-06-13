@@ -4,7 +4,11 @@
 
 CLOC is a contrastive loss function designed for ordinal classification tasks. It supports both multiple and single margin setups and can be integrated easily into PyTorch training loop.
 
-[**Paper**](https://arxiv.org/abs/2504.17813)
+[![CVF Page](./assets/cvf_logo.jpg)](https://openaccess.thecvf.com/content/CVPR2025/html/Pitawela_CLOC_Contrastive_Learning_for_Ordinal_Classification_with_Multi-Margin_N-pair_Loss_CVPR_2025_paper.html)
+
+[![PDF](./assets/pdf_logo.jpg)](https://openaccess.thecvf.com/content/CVPR2025/papers/Pitawela_CLOC_Contrastive_Learning_for_Ordinal_Classification_with_Multi-Margin_N-pair_Loss_CVPR_2025_paper.pdf)
+
+[![ARXIV](./assets/arxiv_logo.jpg)](https://arxiv.org/abs/2504.17813)
 
 ---
 
@@ -193,13 +197,12 @@ Note: Unlike the Option 1, this must be done before the program ends, or the val
 
 
 ```
-@misc{cloc,
-      title={CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss}, 
-      author={Dileepa Pitawela and Gustavo Carneiro and Hsiang-Ting Chen},
-      year={2025},
-      eprint={2504.17813},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2504.17813}, 
+@InProceedings{Pitawela_2025_CVPR,
+    author    = {Pitawela, Dileepa and Carneiro, Gustavo and Chen, Hsiang-Ting},
+    title     = {CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {15538-15548}
 }
 ```
