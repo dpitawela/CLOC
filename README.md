@@ -9,7 +9,7 @@ CLOC is a contrastive loss function designed for ordinal classification tasks. I
 </a>
 
 <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Pitawela_CLOC_Contrastive_Learning_for_Ordinal_Classification_with_Multi-Margin_N-pair_Loss_CVPR_2025_paper.pdf">
-  <img src="./assets/pdf_logo.jpg" alt="PDF Logo" width="50" target="_blank"/>
+  <img src="./assets/pdf_logo.jpg" alt="PDF Logo" width="50" target="blank"/>
 </a>
 
 
