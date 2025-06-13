@@ -1,7 +1,6 @@
 <!-- # CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss
 <small>CVPR 2025</small> -->
-<small style="font-size:0.875em;">CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss</small>
-
+<b style="font-size:2em;">CLOC: Contrastive Learning for Ordinal Classification with Multi-Margin N-pair Loss</b>
 ### CVPR 2025
 
 ## Overview
